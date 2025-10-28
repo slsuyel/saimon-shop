@@ -89,7 +89,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-rose-500 flex-shrink-0 mt-0.5" />
                 <span className="text-gray-400">
-                  123 Commerce Street, Shopping District, NY 10001
+                  74 Gulshan Ave, Dhaka 1212, Bangladesh
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -191,7 +191,7 @@ const Footer = () => {
 
       {/* Payment Methods */}
       <div className="border-t border-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 py-6">
+        <div className="container mx-auto  py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-500 text-sm">
               © {new Date().getFullYear()} SaimonShop. All rights reserved.

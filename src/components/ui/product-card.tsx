@@ -84,7 +84,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
         {/* Price */}
         <div className="mb-3 flex items-baseline gap-2">
-          <span className="text-base font-bold text-primary md:text-lg">
+          <span className="text-base  text-primary md:text-lg">
             ${product.price || 0}
           </span>
         </div>
@@ -100,7 +100,7 @@ export function ProductCard({ product }: ProductCardProps) {
             Cart
           </Button>
           <Button
-            className="flex-1 rounded-full bg-primary px-3 py-2 text-white dark:text-blue-400 shadow-sm transition-all duration-300 hover:bg-primary/90 hover:shadow-md hover:scale-105 md:py-2"
+            className="flex-1 rounded-full bg-primary px-3 py-2 text-white dark:text-white shadow-sm transition-all duration-300 hover:bg-primary/90 hover:shadow-md hover:scale-105 md:py-2"
             size="sm"
           >
             Buy Now
