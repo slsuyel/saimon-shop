@@ -93,7 +93,6 @@ Saimon Shop uses **Next.js 15 App Router** for structured routing, co-located co
 | State Management| Redux Toolkit, React-Redux, redux-persist |
 | Styling & UI    | Tailwind CSS, Shadcn UI (@radix-ui) |
 | Utilities       | clsx, tailwind-merge, class-variance-authority (CVA) |
-| Forms           | react-hook-form |
 | Animations      | framer-motion |
 | Feedbacks       | sonner (Toast notifications) |
 
@@ -107,7 +106,7 @@ Saimon Shop uses **Next.js 15 App Router** for structured routing, co-located co
 
 ## ⏱️ Time Spent
 
-The initial setup and architecture foundation took approximately **3 hours**, covering:
+The initial setup and architecture foundation took approximately **5 hours**, covering:
 
 - Next.js 15 project setup (package.json, tsconfig.json)  
 - `src/app` directory structure & routing  
