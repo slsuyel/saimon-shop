@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { ShoppingCart, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { toast } from "sonner";
 import { useAppDispatch } from "../Redux/hooks";
 import { addToCart } from "../Redux/Slice/cartSlice";
 
@@ -26,11 +27,12 @@ export function ProductCard({ product }: ProductCardProps) {
         image: product.image,
       })
     );
+
+    toast.success(` ${product.title} added to cart!`, { position: "top-left" });
   };
 
   return (
     <div className="group relative flex h-full flex-col rounded-xl border bg-white dark:bg-gray-900 p-1.5 md:p-3 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:border-primary/60">
-      {/* Product Image */}
       <Link
         href={`/product/${product.id}`}
         className="relative mb-4 overflow-hidden rounded-lg"
@@ -49,7 +51,6 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
       </Link>
 
-      {/* Product Info */}
       <div className="flex flex-1 flex-col">
         <Link
           href={`/product/${product.id}`}
@@ -60,7 +61,6 @@ export function ProductCard({ product }: ProductCardProps) {
           </h3>
         </Link>
 
-        {/* Rating */}
         <div className="mb-2 flex items-center gap-1">
           <div className="flex">
             {[...Array(5)].map((_, i) => (
@@ -82,14 +82,12 @@ export function ProductCard({ product }: ProductCardProps) {
 
         <div className="flex-1"></div>
 
-        {/* Price */}
         <div className="mb-3 flex items-baseline gap-2">
           <span className="text-base  text-primary md:text-lg">
             ${product.price || 0}
           </span>
         </div>
 
-        {/* Action Buttons */}
         <div className="flex gap-1 md:gap-2 justify-between">
           <Button
             onClick={handleAddToCart}

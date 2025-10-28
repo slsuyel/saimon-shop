@@ -32,7 +32,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         image: product.image,
       })
     );
-    toast.success("Product added to cart!");
+    toast.success(` ${product.title} added to cart!`, { position: "top-left" });
   };
 
   const toggleAccordion = (key: string) => {
