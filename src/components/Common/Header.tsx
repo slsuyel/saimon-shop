@@ -39,9 +39,7 @@ export default function Header() {
     setMobileMenuOpen(false);
   }, [pathname]);
   const showAlert = () => {
-    toast.warning(
-      `This features is coming soon.You can contact with whatsapp or direct call to us 01521778783`
-    );
+    toast.warning(`This features is coming soon`);
   };
 
   return (
