@@ -33,18 +33,18 @@ const slides = [
 
 const HeroSlider = () => {
   return (
-    <section className="relative pt-20 lg:pt-28 pb-2 lg:pb-10 bg-white dark:bg-gray-900">
+    <section className="relative pt-20 lg:pt-20 pb-2 bg-white dark:bg-gray-900 ">
       <Carousel
-        className="bg-[#F2F4F5] dark:bg-gray-800 mt-2 md:mt-6 container mx-auto px-2 md:px-4"
+        className="bg-[#F2F4F5] dark:bg-gray-800 mt-2 md:mt-6 container mx-auto  rounded-md"
         opts={{ loop: true }}
       >
-        <CarouselContent>
+        <CarouselContent className="">
           {slides.map((slide, index) => (
             <CarouselItem
               key={index}
               className="h-full w-full flex items-center "
             >
-              <div className="py-4 px-4 w-full md:p-8 rounded-md flex items-center">
+              <div className="py-4 px-2 md:px-4 w-full md:p-8 rounded-md flex items-center">
                 <div className="w-[55%]">
                   <div className="hidden md:block">
                     <span className="md:py-1.5 py-1 px-2 md:px-4 text-[0.8rem] rounded-md bg-blue-400 text-white dark:bg-blue-600">

@@ -1,199 +1,223 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
-  FacebookIcon,
-  GithubIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  TwitterIcon,
+  ChevronRight,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted dark:bg-gray-900">
-      <div className="container mx-auto px-2 py-8 sm:py-12 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8">
-          <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent dark:from-primary dark:to-secondary">
-              Saimon Shop
-            </h3>
-            <p className="text-muted-foreground text-xs sm:text-sm dark:text-gray-400">
-              Saimon Shop is a leading e-commerce marketplace in South Asia,
-              owned by the Saimon Global Group,
+    <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-200">
+      {/* Newsletter Section */}
+      <div className="border-b border-gray-800">
+        <div className="container mx-auto py-10 px-4 sm:px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="max-w-md">
+              <h3 className="text-xl font-bold text-white mb-2">
+                Join our newsletter
+              </h3>
+              <p className="text-gray-400">
+                Get exclusive offers, new product alerts and 10% off your first
+                order
+              </p>
+            </div>
+            <div className="w-full md:w-auto flex-1 max-w-md">
+              <div className="flex gap-2">
+                <Input
+                  type="email"
+                  placeholder="Your email address"
+                  className="bg-gray-800 border-gray-700 focus:border-gray-600 text-white"
+                />
+                <Button className="bg-rose-600 hover:bg-rose-700 text-white">
+                  Subscribe
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 sm:px-6 py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          {/* Brand Column */}
+          <div className="lg:col-span-2 space-y-6">
+            <div className="flex items-center">
+              <span className="text-2xl font-bold text-white">
+                Saimon<span className="text-rose-500">Shop</span>
+              </span>
+            </div>
+            <p className="text-gray-400 max-w-xs">
+              Your one-stop destination for premium products with exceptional
+              quality and unbeatable prices.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex items-center space-x-4">
               <Link
-                href="#"
-                className="text-muted-foreground hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+                href="/"
+                className="bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-colors"
               >
-                <FacebookIcon className="h-4 w-4 sm:h-5 sm:w-5" />
-                <span className="sr-only">Facebook</span>
+                <Facebook className="h-5 w-5 text-gray-300" />
               </Link>
               <Link
-                href="#"
-                className="text-muted-foreground hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+                href="/"
+                className="bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-colors"
               >
-                <TwitterIcon className="h-4 w-4 sm:h-5 sm:w-5" />
-                <span className="sr-only">Twitter</span>
+                <Instagram className="h-5 w-5 text-gray-300" />
               </Link>
               <Link
-                href="#"
-                className="text-muted-foreground hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+                href="/"
+                className="bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-colors"
               >
-                <InstagramIcon className="h-4 w-4 sm:h-5 sm:w-5" />
-                <span className="sr-only">Instagram</span>
+                <Linkedin className="h-5 w-5 text-gray-300" />
               </Link>
               <Link
-                href="#"
-                className="text-muted-foreground hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+                href="/"
+                className="bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-colors"
               >
-                <LinkedinIcon className="h-4 w-4 sm:h-5 sm:w-5" />
-                <span className="sr-only">LinkedIn</span>
+                <Twitter className="h-5 w-5 text-gray-300" />
               </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-              >
-                <GithubIcon className="h-4 w-4 sm:h-5 sm:w-5" />
-                <span className="sr-only">GitHub</span>
-              </Link>
+            </div>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 text-rose-500 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-400">
+                  123 Commerce Street, Shopping District, NY 10001
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-5 w-5 text-rose-500 flex-shrink-0" />
+                <span className="text-gray-400">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="h-5 w-5 text-rose-500 flex-shrink-0" />
+                <span className="text-gray-400">support@saimonshop.com</span>
+              </div>
             </div>
           </div>
 
-          <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 dark:text-gray-200">
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h6 className="text-white font-semibold uppercase tracking-wider">
+              Shop
+            </h6>
+            <ul className="space-y-3">
+              {[
+                "New Arrivals",
+                "Best Sellers",
+                "Trending Now",
+                "Summer Collection",
+                "Winter Essentials",
+                "Accessories",
+                "Gift Cards",
+              ].map((item) => (
+                <li key={item}>
+                  <Link
+                    href="/"
+                    className="text-gray-400 hover:text-white flex items-center group"
+                  >
+                    <ChevronRight className="h-4 w-4 text-gray-600 group-hover:text-rose-500 transition-colors mr-1" />
+                    <span>{item}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Account Links */}
+          <div className="space-y-4">
+            <h6 className="text-white font-semibold uppercase tracking-wider">
+              Account
+            </h6>
+            <ul className="space-y-3">
+              {[
+                "My Account",
+                "Orders History",
+                "Wishlist",
+                "Returns",
+                "Track Order",
+                "Shipping Info",
+                "Gift Cards",
+              ].map((item) => (
+                <li key={item}>
+                  <Link
+                    href="/"
+                    className="text-gray-400 hover:text-white flex items-center group"
+                  >
+                    <ChevronRight className="h-4 w-4 text-gray-600 group-hover:text-rose-500 transition-colors mr-1" />
+                    <span>{item}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company Links */}
+          <div className="space-y-4">
+            <h6 className="text-white font-semibold uppercase tracking-wider">
               Company
-            </h3>
-            <ul className="space-y-1.5 sm:space-y-2">
-              <li>
-                <Link
-                  href="/#about"
-                  className="text-muted-foreground hover:text-primary text-xs sm:text-sm dark:text-gray-400 dark:hover:text-primary"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#services"
-                  className="text-muted-foreground hover:text-primary text-xs sm:text-sm dark:text-gray-400 dark:hover:text-primary"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#products"
-                  className="text-muted-foreground hover:text-primary text-xs sm:text-sm dark:text-gray-400 dark:hover:text-primary"
-                >
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#blog"
-                  className="text-muted-foreground hover:text-primary text-xs sm:text-sm dark:text-gray-400 dark:hover:text-primary"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#contact"
-                  className="text-muted-foreground hover:text-primary text-xs sm:text-sm dark:text-gray-400 dark:hover:text-primary"
-                >
-                  Contact
-                </Link>
-              </li>
+            </h6>
+            <ul className="space-y-3">
+              {[
+                "About Us",
+                "Careers",
+                "Press",
+                "Affiliates",
+                "Terms & Conditions",
+                "Privacy Policy",
+                "Cookie Policy",
+              ].map((item) => (
+                <li key={item}>
+                  <Link
+                    href="/"
+                    className="text-gray-400 hover:text-white flex items-center group"
+                  >
+                    <ChevronRight className="h-4 w-4 text-gray-600 group-hover:text-rose-500 transition-colors mr-1" />
+                    <span>{item}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div>
-
-          <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 dark:text-gray-200">
-              Legal
-            </h3>
-            <ul className="space-y-1.5 sm:space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-primary text-xs sm:text-sm dark:text-gray-400 dark:hover:text-primary"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-primary text-xs sm:text-sm dark:text-gray-400 dark:hover:text-primary"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-primary text-xs sm:text-sm dark:text-gray-400 dark:hover:text-primary"
-                >
-                  Cookie Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-primary text-xs sm:text-sm dark:text-gray-400 dark:hover:text-primary"
-                >
-                  Refund Policy
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 dark:text-gray-200">
-              Contact
-            </h3>
-            <address className="not-italic text-muted-foreground text-xs sm:text-sm dark:text-gray-400">
-              <p className="text-muted-foreground">
-                Khilkhet Dhaka
-                <br />
-                Bangladesh
-              </p>
-              <p className="mt-2">Email: info@saimonshop.com</p>
-              <p>Phone: +880172259 7565</p>
-            </address>
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-border mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center dark:border-gray-800">
-          <p className="text-[10px] sm:text-sm text-muted-foreground dark:text-gray-500">
-            &copy; {new Date().getFullYear()} Saimon shop. All rights reserved.
-          </p>
-          <div className="mt-3 sm:mt-4 md:mt-0">
-            <ul className="flex space-x-4 sm:space-x-6 text-[10px] sm:text-sm">
-              <li>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-primary dark:text-gray-500 dark:hover:text-primary"
-                >
-                  Privacy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-primary dark:text-gray-500 dark:hover:text-primary"
-                >
-                  Terms
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-primary dark:text-gray-500 dark:hover:text-primary"
-                >
-                  Sitemap
-                </Link>
-              </li>
-            </ul>
+      {/* Payment Methods */}
+      <div className="border-t border-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-gray-500 text-sm">
+              © {new Date().getFullYear()} SaimonShop. All rights reserved.
+            </div>
+            <div className="flex items-center justify-center">
+              <Image
+                src="https://gadgetbd.com/wp-content/uploads/2020/03/SSLCommerz-Pay-With-logo-All-Size-01.png"
+                width={600}
+                height={100}
+                alt="Payment methods"
+                className=" w-auto"
+              />
+            </div>
+            <div className="text-gray-500 text-sm">
+              <Link href="/" className="hover:text-white">
+                Terms
+              </Link>
+              <span className="mx-2">•</span>
+              <Link href="/" className="hover:text-white">
+                Privacy
+              </Link>
+              <span className="mx-2">•</span>
+              <Link href="/" className="hover:text-white">
+                Cookies
+              </Link>
+            </div>
           </div>
         </div>
       </div>

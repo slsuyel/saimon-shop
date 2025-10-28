@@ -12,7 +12,7 @@ interface Props {
 }
 
 export const ProductSection = ({ products }: Props) => {
-  const [columns, setColumns] = useState<number>(4);
+  const [columns, setColumns] = useState<number>(5);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
@@ -53,7 +53,7 @@ export const ProductSection = ({ products }: Props) => {
   };
 
   return (
-    <div className="container mx-auto my-6 px-2 lg:px-4">
+    <div className="container mx-auto my-6 px-2 ">
       {/* Filters + Grid Toggle */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-4">
         <ProductFilters
@@ -89,7 +89,7 @@ export const ProductSection = ({ products }: Props) => {
       {/* Product Grid */}
       <div
         className={clsx(
-          "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6",
+          "grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-4",
           columnClass
         )}
       >
