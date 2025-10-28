@@ -32,7 +32,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
   const router = useRouter();
   const handleBuyNow = () => {
     handleAddToCart();
-    router.push("/checkout");
+    toast.warning(`Feature coming soon`);
   };
 
   return (
