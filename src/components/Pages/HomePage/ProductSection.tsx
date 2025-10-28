@@ -72,11 +72,11 @@ export const ProductSection = ({ products }: Props) => {
 
 // export const ProductSection = () => {
 //   // RTK Query call
-//   const {
-//     data: products,
-//     isLoading,
-//     isError,
-//   } = useAllProductsQuery({ limit: 20 });
+  // const {
+  //   data: products,
+  //   isLoading,
+  //   isError,
+  // } = useAllProductsQuery({ limit: 10 });
 
 //   if (isLoading) {
 //     return (
