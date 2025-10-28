@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { Menu, ShoppingCart, X } from "lucide-react";
+import { Menu, ShoppingCart, User2, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -103,7 +103,7 @@ export default function Header() {
           <ThemeToggle />
           {/* <Link href="/my-account" className="hidden md:block"> */}
           <Button onClick={showAlert} size="sm" className="font-medium">
-            My Account
+            <User2 />
           </Button>
           {/* </Link> */}
 
