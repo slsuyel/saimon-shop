@@ -33,7 +33,7 @@ const slides = [
 
 const HeroSlider = () => {
   return (
-    <section className="relative py-20 lg:py-28 bg-white dark:bg-gray-900">
+    <section className="relative pt-20 lg:pt-28 pb-2 lg:pb-10 bg-white dark:bg-gray-900">
       <Carousel
         className="bg-[#F2F4F5] dark:bg-gray-800 mt-2 md:mt-6 container mx-auto px-2 md:px-4"
         opts={{ loop: true }}

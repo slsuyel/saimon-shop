@@ -75,7 +75,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
               </div>
             </div>
 
-            <hr className="my-6 border-slate-300 dark:border-gray-700" />
+            <hr className="  my-2 lg:my-4 border-slate-300 dark:border-gray-700" />
 
             <div>
               <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-slate-100">
@@ -143,13 +143,13 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
               </div>
             </div>
 
-            <hr className="my-6 border-slate-300 dark:border-gray-700" />
+            <hr className="  my-2 lg:my-4 border-slate-300 dark:border-gray-700" />
 
             <div>
               <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-slate-100">
                 Customer Reviews
               </h3>
-              <div className="flex items-center gap-1.5 mt-6">
+              <div className="flex items-center gap-1.5 mt-2 lg:mt-6">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}

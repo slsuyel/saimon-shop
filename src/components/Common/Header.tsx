@@ -15,9 +15,7 @@ import { useAppSelector } from "../Redux/hooks";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Shop", href: "/products" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
+  { name: "Shop", href: "/shop" },
 ];
 
 export default function Header() {
