@@ -1,9 +1,10 @@
 "use client";
+import { ThemeProvider } from "next-themes";
 import React from "react";
 import { Provider as ReduxProvider } from "react-redux";
-import { persistor, store } from "../Redux/store";
-import { Toaster } from "sonner";
 import { PersistGate } from "redux-persist/integration/react";
+import { Toaster } from "sonner";
+import { persistor, store } from "../Redux/store";
 
 const Provider = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,7 +12,14 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
       <ReduxProvider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Toaster position="top-right" richColors />
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </PersistGate>
       </ReduxProvider>
     </div>
